@@ -1,11 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title> Github-Issue-Tracker</title>
+<link rel="shortcut icon" href="./assets/github-logo.png" type="image/x-icon">
+
+    <!-- tailwind-daisy-ui -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "Geist", sans-serif;
+      }
+    </style>
 </head>
-<body>
-    <h1> helllo i am fine </h1>
+
+<body class="bg-base-200">
+
+
+<header class="bg-base-100 shadow">
+
+<div class="max-w-[1160px] mx-auto navbar">
+
+<div class="flex-1 gap-2 flex items-center">
+
+<img class="w-10 h-10" src="./assets/github-logo.png">
+
+<a class="text-xl font-bold">GitHub Issues Tracker</a>
+
+</div>
+
+<div class="flex gap-2 items-center">
+
+<label class="input input-bordered flex items-center gap-2">
+
+<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 opacity-50" viewBox="0 0 24 24">
+<circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2" fill="none"/>
+<path d="m21 21-4.3-4.3" stroke="currentColor" stroke-width="2"/>
+</svg>
+
+<input id="searchInput" type="text" placeholder="Search issues..." class="grow"/>
+
+</label>
+
+<button onclick="searchIssue()" class="btn btn-primary">
++ New Issue
+</button>
+
+</div>
+
+</div>
+
+</header>
+
+
+<div class="max-w-[1020px] mx-auto p-6">
+
+
+<div class="flex gap-2 my-4 bg-base-100 p-4 rounded-lg">
+
+<button id="allBtn" class="btn btn-outline border-gray-300 text-gray-600 px-10">All</button>
+<button id="openBtn" class="btn btn-outline  border-gray-300 text-gray-600 px-8">Open</button>
+<button id="closedBtn" class="btn btn-outline  border-gray-300 text-gray-600 px-8">Closed</button>
+
+</div>
+
+
+
+<script src="js/script.js"></script>
+
 </body>
 </html>
